@@ -9,18 +9,19 @@ def primes(number_of_primes):
         if isPrime(number):
             list.append(number)
             number_of_primes = number_of_primes - 1
-            number = number + 1
-        else:
-            number = number + 1
+        number = number + 1
+
     return list
 
 def isPrime(number):
     if number == 2:
         return True
+    elif number == 3:
+        return True
     else:
         for value in range(2, number):
             if (number % value) == 0:
                 return False
-            else:
-                return True
+        else:
+            return True
     return False
